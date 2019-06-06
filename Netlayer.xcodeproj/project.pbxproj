@@ -16,7 +16,19 @@
 		B5EFCDEA22A758D0005524BD /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFCDE922A758D0005524BD /* JSONParameterEncoder.swift */; };
 		B5EFCDEC22A75902005524BD /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFCDEB22A75902005524BD /* NetworkRouter.swift */; };
 		B5EFCDEE22A75971005524BD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFCDED22A75971005524BD /* Router.swift */; };
+		B5EFCDF822A8BEBE005524BD /* URLParameterEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFCDF722A8BEBE005524BD /* URLParameterEncoderTests.swift */; };
+		B5EFCDFA22A8BEBE005524BD /* Netlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EFCDCA22A74F04005524BD /* Netlayer.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5EFCDFB22A8BEBE005524BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5EFCDC122A74F04005524BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5EFCDC922A74F04005524BD;
+			remoteInfo = Netlayer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B5EFCDCA22A74F04005524BD /* Netlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Netlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +42,9 @@
 		B5EFCDE922A758D0005524BD /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		B5EFCDEB22A75902005524BD /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B5EFCDED22A75971005524BD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B5EFCDF522A8BEBE005524BD /* NetlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EFCDF722A8BEBE005524BD /* URLParameterEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoderTests.swift; sourceTree = "<group>"; };
+		B5EFCDF922A8BEBE005524BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +55,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5EFCDF222A8BEBE005524BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EFCDFA22A8BEBE005524BD /* Netlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				B5EFCDCC22A74F04005524BD /* Netlayer */,
+				B5EFCDF622A8BEBE005524BD /* NetlayerTests */,
 				B5EFCDCB22A74F04005524BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B5EFCDCA22A74F04005524BD /* Netlayer.framework */,
+				B5EFCDF522A8BEBE005524BD /* NetlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +133,15 @@
 			path = EndPoint;
 			sourceTree = "<group>";
 		};
+		B5EFCDF622A8BEBE005524BD /* NetlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFCDF722A8BEBE005524BD /* URLParameterEncoderTests.swift */,
+				B5EFCDF922A8BEBE005524BD /* Info.plist */,
+			);
+			path = NetlayerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -140,18 +174,40 @@
 			productReference = B5EFCDCA22A74F04005524BD /* Netlayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B5EFCDF422A8BEBE005524BD /* NetlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5EFCDFD22A8BEBE005524BD /* Build configuration list for PBXNativeTarget "NetlayerTests" */;
+			buildPhases = (
+				B5EFCDF122A8BEBE005524BD /* Sources */,
+				B5EFCDF222A8BEBE005524BD /* Frameworks */,
+				B5EFCDF322A8BEBE005524BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5EFCDFC22A8BEBE005524BD /* PBXTargetDependency */,
+			);
+			name = NetlayerTests;
+			productName = NetlayerTests;
+			productReference = B5EFCDF522A8BEBE005524BD /* NetlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B5EFCDC122A74F04005524BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ben Young";
 				TargetAttributes = {
 					B5EFCDC922A74F04005524BD = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
+					};
+					B5EFCDF422A8BEBE005524BD = {
+						CreatedOnToolsVersion = 10.2;
 					};
 				};
 			};
@@ -168,12 +224,20 @@
 			projectRoot = "";
 			targets = (
 				B5EFCDC922A74F04005524BD /* Netlayer */,
+				B5EFCDF422A8BEBE005524BD /* NetlayerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B5EFCDC822A74F04005524BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5EFCDF322A8BEBE005524BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -198,7 +262,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5EFCDF122A8BEBE005524BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5EFCDF822A8BEBE005524BD /* URLParameterEncoderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5EFCDFC22A8BEBE005524BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5EFCDC922A74F04005524BD /* Netlayer */;
+			targetProxy = B5EFCDFB22A8BEBE005524BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B5EFCDD022A74F05005524BD /* Debug */ = {
@@ -376,6 +456,42 @@
 			};
 			name = Release;
 		};
+		B5EFCDFE22A8BEBE005524BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = NetlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benyoung.NetlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5EFCDFF22A8BEBE005524BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5666V9N38M;
+				INFOPLIST_FILE = NetlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benyoung.NetlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +509,15 @@
 			buildConfigurations = (
 				B5EFCDD322A74F05005524BD /* Debug */,
 				B5EFCDD422A74F05005524BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5EFCDFD22A8BEBE005524BD /* Build configuration list for PBXNativeTarget "NetlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5EFCDFE22A8BEBE005524BD /* Debug */,
+				B5EFCDFF22A8BEBE005524BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

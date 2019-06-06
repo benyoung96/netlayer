@@ -44,11 +44,11 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
                 try self.configureParameters(bodyParameters: bodyParameters, urlParameters: urlParameters, request: &request)
                 
             case .requestCodable(let model):
-                try self.encodeModel(model: model, request: &request)
+                try self.configureModel(model: model, request: &request)
                 
             case .requestCodableAndHeaders(let model, let additionHeaders):
                 self.addAdditionalHeaders(additionHeaders, request: &request)
-                try self.encodeModel(model: model, request: &request)
+                try self.configureModel(model: model, request: &request)
             }
             return request
         } catch {
@@ -69,7 +69,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
-    fileprivate func encodeModel<Model: Encodable>(model: Model?, request: inout URLRequest) throws {
+    fileprivate func configureModel<Model: Encodable>(model: Model?, request: inout URLRequest) throws {
         do {
             if let model = model {
                 try JSONParameterEncoder.encode(urlRequest: &request, with: model)
